@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EmbeddedResourceService.Test
@@ -48,26 +49,26 @@ namespace EmbeddedResourceService.Test
         }
 
         [TestMethod]
-        public void ReadAllTextAsync()
+        public async Task ReadAllTextAsync()
         {
             // Arrange
             var expected = "This file contains simple text data.";
 
             // Act
-            var actual = _service.ReadToEndAsync(@"EmbeddedResources.plaintext.txt").Result;
+            var actual = await _service.ReadToEndAsync(@"EmbeddedResources.plaintext.txt");
 
             // Assert
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ReadAllTextAsyncFromNonExistentResource_ReadEmptyString()
+        public async Task ReadAllTextAsyncFromNonExistentResource_ReadEmptyString()
         {
             // Arrange
             var expected = string.Empty;
 
             // Act
-            var actual = _service.ReadToEndAsync(@"nonExistentFile.txt").Result;
+            var actual = await _service.ReadToEndAsync(@"nonExistentFile.txt");
 
             // Assert
             Assert.AreEqual(expected, actual);
