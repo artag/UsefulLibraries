@@ -5,7 +5,7 @@ namespace StringExtensions
     /// <summary>
     /// Static class with string extension methods to work with consecutive symbols.
     /// </summary>
-    public static class ConsecutiveChars
+    public static class ConsecutiveCharacters
     {
         /// <summary>
         /// Replace consecutive characters with single in the input string.
