@@ -25,7 +25,41 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\EmbeddedResourceService\EmbeddedResourceService.csproj" />
       <ProjectReference Include="..\StringExtensions\StringExtensions.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\TestPage.html" />
+      <EmbeddedResource Include="Resources\TestPage.html" />
+      <None Remove="Resources\TagAnchorAccesskey.html" />
+      <EmbeddedResource Include="Resources\TagAnchorAccesskey.html" />
+      <None Remove="Resources\TagAnchorCoords.html" />
+      <EmbeddedResource Include="Resources\TagAnchorCoords.html" />
+      <None Remove="Resources\TagAnchorDownload.html" />
+      <EmbeddedResource Include="Resources\TagAnchorDownload.html" />
+      <None Remove="Resources\TagAnchorHref.html" />
+      <EmbeddedResource Include="Resources\TagAnchorHref.html" />
+      <None Remove="Resources\TagAnchorHreflang.html" />
+      <EmbeddedResource Include="Resources\TagAnchorHreflang.html" />
+      <None Remove="Resources\TagAnchorName.html" />
+      <EmbeddedResource Include="Resources\TagAnchorName.html" />
+      <None Remove="Resources\TagAnchorRel.html" />
+      <EmbeddedResource Include="Resources\TagAnchorRel.html" />
+      <None Remove="Resources\TagAnchorRev.html" />
+      <EmbeddedResource Include="Resources\TagAnchorRev.html" />
+      <None Remove="Resources\TagAnchorShape.html" />
+      <EmbeddedResource Include="Resources\TagAnchorShape.html" />
+      <None Remove="Resources\TagAnchorTabIndex.html" />
+      <EmbeddedResource Include="Resources\TagAnchorTabIndex.html" />
+      <None Remove="Resources\TagAnchorTarget.html" />
+      <EmbeddedResource Include="Resources\TagAnchorTarget.html" />
+      <None Remove="Resources\TagAnchorTitle.html" />
+      <EmbeddedResource Include="Resources\TagAnchorTitle.html" />
+      <None Remove="Resources\TagAnchorType.html" />
+      <EmbeddedResource Include="Resources\TagAnchorType.html" />
+      <None Remove="Resources\stallman-computing.html" />
+      <EmbeddedResource Include="Resources\stallman-computing.html" />
     </ItemGroup>
 
 </Project>
