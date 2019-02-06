@@ -17,6 +17,22 @@ namespace StringExtensions
         /// <returns>String without selected characters.</returns>
         public static string RemoveChars(this string str, IEnumerable<char> charsToRemove)
         {
+            return RemoveCharsFromString(str, charsToRemove);
+        }
+
+        /// <summary>
+        /// Remove characters from the input string.
+        /// </summary>
+        /// <param name="str">Input string.</param>
+        /// <param name="charsToRemove">Characters to remove.</param>
+        /// <returns>String without selected characters.</returns>
+        public static string RemoveChars(this string str, params char[] charsToRemove)
+        {
+            return RemoveCharsFromString(str, charsToRemove);
+        }
+
+        private static string RemoveCharsFromString(string str, IEnumerable<char> charsToRemove)
+        {
             var initialLength = str.Length;
             var stringBuilder = new StringBuilder(initialLength);
 
