@@ -4,10 +4,11 @@ using System.Text.RegularExpressions;
 
 namespace StringExtensions
 {
-    public static class HtmlTagsFinder
+    /// <summary>
+    /// Static class with string extension methods to work with html tags.
+    /// </summary>
+    public static class HtmlTags
     {
-        private static string s_anchorPattern = @"<\s*a.*?>.*?<\s*\/a\s*>";
-
         /// <summary>
         /// Searching for anchor tags in input html page.
         /// </summary>
@@ -20,7 +21,9 @@ namespace StringExtensions
         /// </remarks>
         public static IEnumerable<string> FindAnchorTags(this string htmlPage)
         {
-            var matches = Regex.Matches(htmlPage, s_anchorPattern, RegexOptions.IgnoreCase);
+            var anchorPattern = @"<\s*a.*?>.*?<\s*\/a\s*>";
+
+            var matches = Regex.Matches(htmlPage, anchorPattern, RegexOptions.IgnoreCase);
 
             return matches.Select(match => match.Groups[0].Value);
         }
