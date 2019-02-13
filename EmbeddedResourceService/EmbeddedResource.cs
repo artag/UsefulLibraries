@@ -8,15 +8,15 @@ namespace EmbeddedResourceService
     /// <summary>
     /// Service class for access to assembly embedded resources.
     /// </summary>
-    public class EmbeddedResourceService : IEmbeddedResourceService
+    public class EmbeddedResource : IEmbeddedResource
     {
         private readonly Assembly _assembly;
 
         /// <summary>
-        /// Initialize the instance of the <see cref="EmbeddedResourceService"/> class.
+        /// Initialize the instance of the <see cref="EmbeddedResource"/> class.
         /// </summary>
         /// <param name="type">Any type from the assembly.</param>
-        public EmbeddedResourceService(Type type)
+        public EmbeddedResource(Type type)
         {
             if (type == null) throw new ArgumentNullException(nameof(type));
 

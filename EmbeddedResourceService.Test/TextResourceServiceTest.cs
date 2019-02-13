@@ -7,11 +7,11 @@ namespace EmbeddedResourceService.Test
     [TestClass]
     public class TextResourceServiceTest
     {
-        private readonly ITextResourceService _service;
+        private readonly ITextResource _service;
 
         public TextResourceServiceTest()
         {
-            _service = new TextResourceService(typeof(TextResourceServiceTest));
+            _service = new TextResource(typeof(TextResourceServiceTest));
         }
 
         [TestMethod]
@@ -19,7 +19,7 @@ namespace EmbeddedResourceService.Test
         public void CreateTextResourceServiceWithNullParameter_ThrowArgumentNullException()
         {
             // Arrange
-            var service = new TextResourceService(null);
+            var service = new TextResource(null);
         }
 
         [TestMethod]

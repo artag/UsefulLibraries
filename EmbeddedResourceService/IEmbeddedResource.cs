@@ -2,7 +2,7 @@ using System.IO;
 
 namespace EmbeddedResourceService
 {
-    public interface IEmbeddedResourceService
+    public interface IEmbeddedResource
     {
         /// <summary>
         /// Get stream from embedded resource.

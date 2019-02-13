@@ -9,11 +9,11 @@ namespace StringExtensions.Test
     [TestClass]
     public class FindHrefAttribute
     {
-        private readonly TextResourceService _textResourceService;
+        private readonly TextResource _textResource;
 
         public FindHrefAttribute()
         {
-            _textResourceService = new TextResourceService(typeof(FindAnchorTags));
+            _textResource = new TextResource(typeof(FindAnchorTags));
         }
 
         [TestMethod]
@@ -409,7 +409,7 @@ namespace StringExtensions.Test
         public void FindingHref_EmbeddedResource_TestPage()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TestPage.html");
+            var input = _textResource.ReadToEnd("Resources.TestPage.html");
             var expected = new List<string>
             {
                 "/e",
@@ -434,7 +434,7 @@ namespace StringExtensions.Test
         public void FindingAnchors_EmbeddedResource_StallmanComputingCropPage()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.stallman-computing.html");
+            var input = _textResource.ReadToEnd("Resources.stallman-computing.html");
             var expected = new List<string>
             {
                 "/",

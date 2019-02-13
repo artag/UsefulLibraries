@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace EmbeddedResourceService
 {
-    public interface ITextResourceService
+    public interface ITextResource
     {
         /// <summary>
         /// Read all characters from the embedded plain text resource.

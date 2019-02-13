@@ -7,13 +7,13 @@ namespace EmbeddedResourceService
     /// <summary>
     /// Service class for access to embedded plain text resources.
     /// </summary>
-    public class TextResourceService : EmbeddedResourceService, ITextResourceService
+    public class TextResource : EmbeddedResource, ITextResource
     {
         /// <summary>
-        /// Initialize the instance of the <see cref="TextResourceService"/> class.
+        /// Initialize the instance of the <see cref="TextResource"/> class.
         /// </summary>
         /// <param name="type">Any type from the assembly.</param>
-        public TextResourceService(Type type) : base(type)
+        public TextResource(Type type) : base(type)
         {
         }
 

@@ -8,11 +8,11 @@ namespace StringExtensions.Test
     [TestClass]
     public class FindAnchorTags
     {
-        private readonly ITextResourceService _textResourceService;
+        private readonly ITextResource _textResource;
 
         public FindAnchorTags()
         {
-            _textResourceService = new TextResourceService(typeof(FindAnchorTags));
+            _textResource = new TextResource(typeof(FindAnchorTags));
         }
 
         [TestMethod]
@@ -65,7 +65,7 @@ namespace StringExtensions.Test
         public void AnchorWithAccesskeyAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorAccesskey.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorAccesskey.html");
 
             var expected = new List<string>
             {
@@ -86,7 +86,7 @@ namespace StringExtensions.Test
         public void AnchorWithCoordsAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorCoords.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorCoords.html");
 
             var expected = new List<string> { "<a href=\"URL\" coords=\"coordinates\">...</a>" };
 
@@ -104,7 +104,7 @@ namespace StringExtensions.Test
         public void AnchorWithDownloadAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorDownload.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorDownload.html");
             var expected = new List<string>
             {
                 "<a href=\"images/file.jpg\">Open file in browser</a>",
@@ -125,7 +125,7 @@ namespace StringExtensions.Test
         public void AnchorWithHrefAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorHref.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorHref.html");
             var expected = new List<string>
             {
                 "<a href=\"images/awesome.jpg\">Look at my photo!</a>",
@@ -149,7 +149,7 @@ namespace StringExtensions.Test
         public void AnchorWithHreflangAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorHreflang.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorHreflang.html");
             var expected = new List<string>
             {
                 "<a href=\"http://baidu.cn\" hreflang=\"zh\">Chinese searching service Baidu</a>"
@@ -169,7 +169,7 @@ namespace StringExtensions.Test
         public void AnchorWithNameAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorName.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorName.html");
             var expected = new List<string>
             {
                 "<a name=\"top\"></a>",
@@ -190,7 +190,7 @@ namespace StringExtensions.Test
         public void AnchorWithRelAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorRel.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorRel.html");
             var expected = new List<string>
             {
                 "<a href=\"http://google.com\" rel=\"nofollow\"> Google </a>",
@@ -211,7 +211,7 @@ namespace StringExtensions.Test
         public void AnchorWithRevAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorRev.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorRev.html");
             var expected = new List<string>
             {
                 "<a href=\"index.html\" rel=\"Main page\" rev=\"Child page\"> " +
@@ -232,7 +232,7 @@ namespace StringExtensions.Test
         public void AnchorWithShapeAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorShape.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorShape.html");
             var expected = new List<string>
             {
                 "<a href=\"URL\"shape=\"circle | default | poly | rect\">...</a>"
@@ -252,7 +252,7 @@ namespace StringExtensions.Test
         public void AnchorWithTabIndexAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorTabIndex.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorTabIndex.html");
             var expected = new List<string>
             {
                 "<a href=\"1.html\" tabindex=\"1\">Link 1</a>",
@@ -275,7 +275,7 @@ namespace StringExtensions.Test
         public void AnchorWithTargetAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorTarget.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorTarget.html");
             var expected = new List<string>
             {
                 "<a href=\"new.html\" target=\"_blank\"> Open in new tab </a>"
@@ -295,7 +295,7 @@ namespace StringExtensions.Test
         public void AnchorWithTitleAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorTitle.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorTitle.html");
             var expected = new List<string>
             {
                 "<a href=\"zoo.html\" title=\"Images of various animals...\"> Images</a>"
@@ -315,7 +315,7 @@ namespace StringExtensions.Test
         public void AnchorWithTypeAttribute()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TagAnchorType.html");
+            var input = _textResource.ReadToEnd("Resources.TagAnchorType.html");
             var expected = new List<string>
             {
                 "<a href=\"1.html\">Link to the page</a>",
@@ -337,7 +337,7 @@ namespace StringExtensions.Test
         public void FindingAnchors_EmbeddedResource_TestPage()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.TestPage.html");
+            var input = _textResource.ReadToEnd("Resources.TestPage.html");
             var expected = new List<string>
             {
                 @"<a href='/e'>english</a>",
@@ -372,7 +372,7 @@ namespace StringExtensions.Test
         public void FindingAnchors_EmbeddedResource_StallmanComputingCropPage()
         {
             // Arrange
-            var input = _textResourceService.ReadToEnd("Resources.stallman-computing.html");
+            var input = _textResource.ReadToEnd("Resources.stallman-computing.html");
             var expected = new List<string>
             {
                 "<a href=\"/\">https://stallman.org</a>",
