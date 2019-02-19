@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using System.Linq;
 using EmbeddedResourceService;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringExtensions;
 
-namespace StringExtensions.Test
+namespace HtmlExtensions.Test
 {
     [TestClass]
     public class FindAnchorTags

@@ -1,7 +1,7 @@
 using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace StringExtensions.Test
+namespace HtmlExtensions.Test
 {
     [TestClass]
     public class IsLinkValid

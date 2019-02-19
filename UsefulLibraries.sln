@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbeddedResourceService", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmbeddedResourceService.Test", "EmbeddedResourceService.Test\EmbeddedResourceService.Test.csproj", "{27441B98-639F-4CA2-B40A-A234988BEE1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlExtensions", "HtmlExtensions\HtmlExtensions.csproj", "{67D91257-57DB-47FD-A85F-7B34DFC8DDA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HtmlExtensions.Test", "HtmlExtensions.Test\HtmlExtensions.Test.csproj", "{D7A52314-8B91-45F1-ACD0-D96C1EF982F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{27441B98-639F-4CA2-B40A-A234988BEE1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27441B98-639F-4CA2-B40A-A234988BEE1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27441B98-639F-4CA2-B40A-A234988BEE1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D91257-57DB-47FD-A85F-7B34DFC8DDA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D91257-57DB-47FD-A85F-7B34DFC8DDA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D91257-57DB-47FD-A85F-7B34DFC8DDA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D91257-57DB-47FD-A85F-7B34DFC8DDA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A52314-8B91-45F1-ACD0-D96C1EF982F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A52314-8B91-45F1-ACD0-D96C1EF982F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A52314-8B91-45F1-ACD0-D96C1EF982F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A52314-8B91-45F1-ACD0-D96C1EF982F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

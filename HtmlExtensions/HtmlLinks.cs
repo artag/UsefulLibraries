@@ -1,7 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 
-namespace StringExtensions
+namespace HtmlExtensions
 {
     /// <summary>
     /// Static class with string extension methods to work with html links.
