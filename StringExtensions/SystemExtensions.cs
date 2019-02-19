@@ -1,3 +1,6 @@
+using System;
+using System.Runtime.CompilerServices;
+
 namespace StringExtensions
 {
     /// <summary>
@@ -55,6 +58,25 @@ namespace StringExtensions
         public static bool IsNotNullOrWhiteSpace(this string str)
         {
             return !string.IsNullOrWhiteSpace(str);
+        }
+
+        /// <summary>
+        /// Check whether a specified string is null, empty,
+        /// or consists only of white-space characters.
+        /// If string is null throws <see cref="ArgumentNullException"/>.
+        /// If string is empty or whitespace throws <see cref="ArgumentException"/>.
+        /// </summary>
+        /// <param name="str">The string to check.</param>
+        /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="ArgumentException"></exception>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void CheckNullOrWhiteSpace(this string str)
+        {
+            if (str == null)
+                throw new ArgumentNullException(nameof(str));
+
+            if (str.IsNullOrWhiteSpace())
+                throw new ArgumentException($"Argument {nameof(str)} can't be empty or whitespace");
         }
     }
 }
