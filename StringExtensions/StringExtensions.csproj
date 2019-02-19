@@ -3,6 +3,9 @@
     <PropertyGroup>
         <TargetFramework>netcoreapp2.2</TargetFramework>
         <LangVersion>7.3</LangVersion>
+        <AssemblyVersion>1.9.2.17</AssemblyVersion>
+        <FileVersion>1.9.2.17</FileVersion>
+        <Version>1.9.2.17</Version>
     </PropertyGroup>
 
     <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
