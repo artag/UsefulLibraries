@@ -61,6 +61,35 @@ namespace StringExtensions
         }
 
         /// <summary>
+        /// Determines whether two specified <see cref="String"/> objects have the same value.
+        /// </summary>
+        /// <param name="a">The first string to compare, or null.</param>
+        /// <param name="b">The second string to compare, or null.</param>
+        /// <returns>
+        /// True if the value of a is the same as the value of b; otherwise, false.
+        /// If both a and b are null, the method returns true.
+        /// </returns>
+        public static bool Equals(this string a, string b)
+        {
+            return string.Equals(a, b);
+        }
+
+        /// <summary>
+        /// Determines whether two specified <see cref="String"/> objects have the different values.
+        /// </summary>
+        /// <param name="a">The first string to compare, or null.</param>
+        /// <param name="b">The second string to compare, or null.</param>
+        /// <returns>
+        /// True if the value of a is NOT the same as the value of b; otherwise, false.
+        /// If both a and b are null, the method returns false.
+        /// </returns>
+        public static bool NotEquals(this string a, string b)
+        {
+            return !string.Equals(a, b);
+        }
+
+
+        /// <summary>
         /// Check whether a specified string is null, empty,
         /// or consists only of white-space characters.
         /// If string is null throws <see cref="ArgumentNullException"/>.
